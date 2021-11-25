@@ -1,8 +1,19 @@
+:root {
+  --main-color: #2e4c6d;
+  --hover-color: #5c6b73;
+  --line-feature-color: #ffab4c;
+  --line-color: #fff;
+  --youtube-color: #ff0000;
+  --linkedin-color: #0077b5;
+  --github-color: #1b1f23;
+  --facebook-color: #3b5998;
+}
+
 body {
   background-image: url("bg.jpg");
   background-attachment: fixed;
   background-size: cover;
-  color: #fff;
+  color: var(--line-color);
   min-height: 100vh;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -14,35 +25,35 @@ body {
   border-radius: 50%;
 }
 
-a.featured:hover {
-  background-color: #6d2aff;
-  border: 2px solid #ff9030;
-  color: #fff;
-}
-
-a:hover {
-  background-color: #3ce39c;
-  color: #fff;
-}
-
 a {
   display: block;
   max-width: 400px;
   margin: 0 auto 15px;
   padding: 15px 20px;
-  font-size: 0.85rem;
-  color: #fff;
-  border: 2px solid #fff;
+  font-size: 1rem;
+  color: var(--line-color);
+  border: 2px solid var(--line-color);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
+a:hover {
+  background-color: var(--hover-color);
+  color: var(--line-color);
+}
+
 a.featured {
   position: relative;
-  background-color: #7c41ff;
-  border: 2px solid #ffa04c;
-  color: #fff;
+  background-color: var(--main-color);
+  border: 2px solid var(--line-feature-color);
+  color: var(--line-color);
   font-weight: 700;
+}
+
+a.featured:hover {
+  background-color: var(--main-color);
+  border: 2px solid var(--line-feature-color);
+  color: var(--line-color);
 }
 
 h2 {
@@ -62,8 +73,8 @@ h2 {
   flex: 1;
   padding: 10px 10px;
   margin-right: 10px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--line-color);
+  border: 2px solid var(--line-color);
 }
 
 /* Last link margin = 0 */
@@ -73,18 +84,17 @@ h2 {
 }
 
 .youtube:hover {
-  background-color: #ff0000;
-  border-color: brown;
+  background-color: var(--youtube-color);
 }
 
 .facebook:hover {
-  background-color: #3b5998;
+  background-color: var(--facebook-color);
 }
 
 .linkedin:hover {
-  background-color: #0077b5;
+  background-color: var(--linkedin-color);
 }
 
 .github:hover {
-  background-color: #1b1f23;
+  background-color: var(--github-color);
 }
